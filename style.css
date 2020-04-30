@@ -1,0 +1,17 @@
+body {
+    background-image: url('./background.jpg');
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+}
+
+
+.thumbnails {
+    display: flex;
+    }
+img {
+    display: block;
+    height: 15%;
+    width: 15%;
+    margin: 5px;
+}
