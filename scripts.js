@@ -1,0 +1,1 @@
+$('.currentPhoto').css('background-image', 'url("./fotky/jesienka.jpg")')
