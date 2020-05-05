@@ -63,11 +63,12 @@ $('#left').click(() => {
     loadPhoto(currentPhoto);
 });
 
-// imagesData.forEach(item, index) => {
-
-// }
-
-// let thumbnail = []
-// for(let i = 0; i < imagesData.length; i++) {
-//     thumbnail.push(i)
-// };
+imagesData.forEach((item, index) => {
+    $('.thumbnails').append(`<img src="${item.photo}" class="nahled" data-index="${index}">`);
+});
+    
+$('.nahled').click((event) => {
+    let indexClicked = $(event.target).attr('data-index');
+    currentPhoto = parseInt(indexClicked);
+    loadPhoto(currentPhoto)
+    });  
