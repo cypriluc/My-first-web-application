@@ -24,7 +24,7 @@ let data_3 = {
 
 let data_4 = {
     photo: 'fotky/prasiva.jpg',
-    title: 'Hrebeň Krížnej',
+    title: 'Hrebeň Prašivej',
     description: 'Posledné zbytky jarného snehu na Prašivej.'
 };
 
@@ -41,7 +41,7 @@ let loadPhoto = (photoNumber) => {
     $('#photo').attr('src', imagesData[photoNumber].photo);
     $('#photo-title').html(`<h1>${imagesData[photoNumber].title}</h1>`);
     $('#photo-description').html(`<p>${imagesData[photoNumber].description}</p>`);
-}
+};
 
 loadPhoto(currentPhoto)
 
@@ -52,7 +52,8 @@ $('#right').click(() => {
     currentPhoto++;
     };
     loadPhoto(currentPhoto);
-    
+    $('.active-nahled').toggleClass('active-nahled');    
+    $(`[data-index="${currentPhoto}"]`).toggleClass('active-nahled');
 });
 
 $('#left').click(() => {
@@ -62,6 +63,8 @@ $('#left').click(() => {
     currentPhoto--;
     };
     loadPhoto(currentPhoto);
+    $('.active-nahled').toggleClass('active-nahled');
+    $(`[data-index="${currentPhoto}"]`).toggleClass('active-nahled');
 });
 
 imagesData.forEach((item, index) => {
@@ -74,5 +77,4 @@ $('.nahled').click((event) => {
     loadPhoto(currentPhoto)
     $('.active-nahled').toggleClass('active-nahled');
     $(event.target).toggleClass('active-nahled');
-
-    });  
+});  
