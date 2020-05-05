@@ -37,6 +37,28 @@ let data_5 = {
 let currentPhoto = 0;
 let imagesData = [data_0, data_1, data_2, data_3, data_4, data_5]
 
-$('#photo').attr('src', imagesData[currentPhoto].photo);
-$('#photo-title').html(`<h1>${imagesData[currentPhoto].title}</h1>`);
-$('#photo-description').html(`<p>${imagesData[currentPhoto].description}</p>`);
+let loadPhoto = (photoNumber) => {
+    $('#photo').attr('src', imagesData[photoNumber].photo);
+    $('#photo-title').html(`<h1>${imagesData[photoNumber].title}</h1>`);
+    $('#photo-description').html(`<p>${imagesData[photoNumber].description}</p>`);
+}
+
+loadPhoto(currentPhoto)
+
+$('#right').click(() => {
+    if(currentPhoto === (imagesData.length - 1)) {
+        currentPhoto = 0;           
+    } else {
+    currentPhoto++;
+    };
+    loadPhoto(currentPhoto);
+});
+
+$('#left').click(() => {
+    if(currentPhoto === 0) {
+        currentPhoto = (imagesData.length - 1);        
+    } else {
+    currentPhoto--;
+    };
+    loadPhoto(currentPhoto);
+});
