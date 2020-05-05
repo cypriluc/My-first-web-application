@@ -68,7 +68,7 @@ $('#left').click(() => {
 });
 
 imagesData.forEach((item, index) => {
-    $('.thumbnails').append(`<img src="${item.photo}" class="nahled" data-index="${index}">`);
+    $('.thumbnails').append(`<div class="thumbnail-box"><div class="hidden-title">${item.title}</div><img src="${item.photo}" class="nahled" data-index="${index}"></div>`);
 });
     
 $('.nahled').click((event) => {
