@@ -45,6 +45,13 @@ let loadPhoto = (photoNumber) => {
 
 loadPhoto(currentPhoto)
 
+imagesData.forEach((item, index) => {
+    $('.thumbnails').append(`<div class="thumbnail-box"><div class="hidden-title">${item.title}</div><div class="arrow-bottom"></div><div data-arrow="${index}"></div><img src="${item.photo}" class="nahled" data-index="${index}"></div>`);
+});
+
+$(`[data-index="${currentPhoto}"]`).toggleClass('active-nahled');
+$(`[data-arrow="${currentPhoto}"]`).toggleClass('arrow-top');
+
 $('#right').click(() => {
     if(currentPhoto === (imagesData.length - 1)) {
         currentPhoto = 0;           
@@ -52,8 +59,10 @@ $('#right').click(() => {
     currentPhoto++;
     };
     loadPhoto(currentPhoto);
-    $('.active-nahled').toggleClass('active-nahled');    
+    $('.active-nahled').toggleClass('active-nahled'); 
+    $('.arrow-top').toggleClass('arrow-top');   
     $(`[data-index="${currentPhoto}"]`).toggleClass('active-nahled');
+    $(`[data-arrow="${currentPhoto}"]`).toggleClass('arrow-top');
 });
 
 $('#left').click(() => {
@@ -64,17 +73,19 @@ $('#left').click(() => {
     };
     loadPhoto(currentPhoto);
     $('.active-nahled').toggleClass('active-nahled');
+    $('.arrow-top').toggleClass('arrow-top');
     $(`[data-index="${currentPhoto}"]`).toggleClass('active-nahled');
+    $(`[data-arrow="${currentPhoto}"]`).toggleClass('arrow-top');
 });
 
-imagesData.forEach((item, index) => {
-    $('.thumbnails').append(`<div class="thumbnail-box"><div class="hidden-title">${item.title}</div><img src="${item.photo}" class="nahled" data-index="${index}"></div>`);
-});
-    
 $('.nahled').click((event) => {
     let indexClicked = $(event.target).attr('data-index');
     currentPhoto = parseInt(indexClicked);
     loadPhoto(currentPhoto)
     $('.active-nahled').toggleClass('active-nahled');
+    $('.arrow-top').toggleClass('arrow-top');   
     $(event.target).toggleClass('active-nahled');
+    $(`[data-arrow="${currentPhoto}"]`).toggleClass('arrow-top');
 });  
+
+$('.active-nahled')
