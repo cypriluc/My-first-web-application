@@ -62,3 +62,12 @@ $('#left').click(() => {
     };
     loadPhoto(currentPhoto);
 });
+
+// imagesData.forEach(item, index) => {
+
+// }
+
+// let thumbnail = []
+// for(let i = 0; i < imagesData.length; i++) {
+//     thumbnail.push(i)
+// };
