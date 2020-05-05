@@ -52,6 +52,7 @@ $('#right').click(() => {
     currentPhoto++;
     };
     loadPhoto(currentPhoto);
+    
 });
 
 $('#left').click(() => {
@@ -71,8 +72,7 @@ $('.nahled').click((event) => {
     let indexClicked = $(event.target).attr('data-index');
     currentPhoto = parseInt(indexClicked);
     loadPhoto(currentPhoto)
-    $('.nahled').css('margin-top', '0px')
-    $('.nahled').css('box-shadow', '0px 3px 10px -5px black')
-    $(event.target).css('margin-top', '-5px');
-    $(event.target).css('box-shadow', '0px 8px 10px -5px black')
+    $('.active-nahled').toggleClass('active-nahled');
+    $(event.target).toggleClass('active-nahled');
+
     });  
