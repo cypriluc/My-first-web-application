@@ -2,10 +2,11 @@
     box-sizing: border-box;
     font-family: 'Judson', serif;
 }
+
 body {
-    background-image: url('./background.jpg');
+    background-image: url('./background2.png');
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: cover;
     background-position: center;
 }
 .galleryBlock {
@@ -53,7 +54,7 @@ button:hover {
     background-color: rgba(0, 0, 0, 0.5);
     color: rgb(255, 255, 255);
     width: 1100px;
-    height: 120px;
+    height: 110px;
     padding: 20px;
 }
 
@@ -63,7 +64,7 @@ h1 {
     padding: 0px;
 }
 p {
-    margin-top: 5px;
+    margin-top: 7px;
     line-height: 1.2;
 }
 .thumbnails {
@@ -136,7 +137,6 @@ p {
     z-index: 1;
 }
 .arrow-top {
-    /* display: none; */
     position: absolute;
     left: 30px;
     top: -10px;
@@ -146,4 +146,23 @@ p {
     border-right: 10px solid transparent;
     border-bottom: 10px solid whitesmoke;
     margin-top: -5px;
+}
+
+footer {
+    display:flex;
+    width: 1200px;
+    margin: auto;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.info {
+    font-size: 14px;
+}
+a {
+    text-decoration: none;
+    color: green;
+}
+a:hover {
+    font-weight: bold;
 }
