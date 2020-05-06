@@ -1,41 +1,59 @@
 let data_0 = {
-    photo: 'fotky/jesienka.jpg',
-    title: 'Rozkvitnutá jesienka',
-    description: 'Hrebene Nízkych Tatier sa farbia dofialova, keď si suchou trávou na svetlo sveta svoju cestu prerážajú jesienky.'
+    photo: 'fotky/jastericka.jpg',
+    title: 'Jašterička',
+    description: 'Jašterica si užíva prvé jarné slnko a hľadá pritom niečo dobrého pod zub.'
 };
 
 let data_1 = {
-    photo: 'fotky/jesterka.jpg',
-    title: 'Jašterička',
-    description: 'Jašterička vystrkuje jazýček.'
+    photo: 'fotky/chopok.jpg',
+    title: 'Chopok',
+    description: 'Pohľad z Ďumbiera, najvyššieho vrcholu Nízkych Tatier (2043 m.n.m) na susedný Chopok (2024 m.n.m.). '
 };
 
 let data_2 = {
-    photo: 'fotky/krizna.jpg',
-    title: 'Hrebeň Krížnej',
-    description: 'Posledné zbytky jarného snehu na Krížnej.'
+    photo: 'fotky/kamzik.jpg',
+    title: 'Kamzík',
+    description: 'Zvedavý tatranský kamzík si ide svojou cestou bez ohľadu na turistov. '
 };
 
 let data_3 = {
-    photo: 'fotky/modry_kvietok.jpg',
-    title: 'Modrý kvietok',
-    description: 'Modrý kvietok zvláštneho druhu rastie v bezfarebnom okolí.'
+    photo: 'fotky/mlok.jpg',
+    title: 'Salamandra',
+    description: 'Salamandra škvrnitá sa teší z ďažďa pričom svojím výstražným sfarbením odrádza možných predátorov. '
 };
 
 let data_4 = {
-    photo: 'fotky/prasiva.jpg',
-    title: 'Hrebeň Prašivej',
-    description: 'Posledné zbytky jarného snehu na Prašivej.'
+    photo: 'fotky/poniklec.jpg',
+    title: 'Poniklec',
+    description: 'Chlpatý Poniklec slovenský je zákonom chránený posol jari. '
 };
 
 let data_5 = {
-    photo: 'fotky/snezienka.jpg',
-    title: 'Snežienka',
-    description: 'Prvá jarná, len čo zasvieti slniečko a miznú zbytky snehu, už kvitne.'
+    photo: 'fotky/ruza.jpg',
+    title: 'Skalná ruža',
+    description: 'Skalná ruža zdobí hory po celý rok. Bez problémov prežije v mraze, v suchu a takmer bez pôdy. Jej vlastnosti využívajú tiež ľudoví liečitelia.'
 };
 
+let data_6 = {
+    photo: 'fotky/stangariegel.jpg',
+    title: 'Štangarígeľ',
+    description: 'Unikátny prírodný výtvor Štangarígeľ  pozostáva z pravidelných päťbokých andezitových pilierov. Niektoré dosahujú výšku až 6 metrov.'
+}
+
+let data_7 = {
+    photo: 'fotky/vazka.jpg',
+    title: 'Vážka červená',
+    description: 'Samček Vážky červenej je sfarbený dočervena, zaitaľ čo samičky bývajú menej nápadné, hnedo-žlté.'
+}
+
+let data_8 = {
+    photo: 'fotky/zapad_zima.jpg',
+    title: 'Západ slnka',
+    description: 'Ružový západ slnka v snehom pocukrovaných Nízkych Tatrách. '
+}
+
 let currentPhoto = 0;
-let imagesData = [data_0, data_1, data_2, data_3, data_4, data_5]
+let imagesData = [data_0, data_1, data_2, data_3, data_4, data_5, data_6, data_7, data_8]
 
 let loadPhoto = (photoNumber) => {
     $('#photo').attr('src', imagesData[photoNumber].photo);
